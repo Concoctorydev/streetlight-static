@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://dk1hpvdc8rqic"]
+
+[ext_resource type="Script" uid="uid://c466re6d6jo46" path="res://scripts/player.gd" id="1_tr5t1"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nfbhi"]
+sky_top_color = Color(0.47843137, 0.5411765, 0.72156864, 1)
+sky_horizon_color = Color(0.7859998, 0.7810979, 0.8173723, 1)
+ground_bottom_color = Color(0.2509804, 0.16862746, 0.13333334, 1)
+ground_horizon_color = Color(0.7859998, 0.7810979, 0.8173723, 1)
+energy_multiplier = 0.75
+
+[sub_resource type="Sky" id="Sky_tr5t1"]
+sky_material = SubResource("ProceduralSkyMaterial_nfbhi")
+
+[sub_resource type="Environment" id="Environment_l8dq3"]
+background_mode = 2
+sky = SubResource("Sky_tr5t1")
+tonemap_mode = 2
+ssao_enabled = true
+glow_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_k4tht"]
+size = Vector2(10, 60)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k4tht"]
+size = Vector3(10, 0.2, 60)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nfbhi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k5jad"]
+
+[node name="street" type="Node3D" unique_id=1025097699]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1534001158]
+environment = SubResource("Environment_l8dq3")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=4193768]
+transform = Transform3D(-0.81714493, 0.119847015, -0.56383586, 0, 0.9781476, 0.2079117, 0.5764323, 0.169894, -0.7992884, 0, 0, 0)
+light_color = Color(1, 0.7058824, 0.41960785, 1)
+light_energy = 1.2
+shadow_enabled = true
+
+[node name="ground" type="StaticBody3D" parent="." unique_id=1867874546]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ground" unique_id=1658403224]
+mesh = SubResource("PlaneMesh_k4tht")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ground" unique_id=1843239331]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+shape = SubResource("BoxShape3D_k4tht")
+
+[node name="player" type="CharacterBody3D" parent="." unique_id=656408453]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("1_tr5t1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="player" unique_id=339403875]
+mesh = SubResource("BoxMesh_nfbhi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="player" unique_id=869338155]
+shape = SubResource("BoxShape3D_k5jad")
+
+[node name="firstPersonCamera" type="Camera3D" parent="player" unique_id=509477956]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+current = true
+
+[node name="thirdPersonCamera" type="Camera3D" parent="player" unique_id=1666285241]
+transform = Transform3D(1, 0, 0, 0, 0.9396926, 0.34202012, 0, -0.34202012, 0.9396926, 0, 3, 6)
