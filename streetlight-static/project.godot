@@ -23,6 +23,7 @@ window/stretch/aspect="expand"
 [physics]
 
 3d/physics_engine="Jolt Physics"
+jolt_physics_3d/motion_queries/use_enhanced_internal_edge_removal=false
 
 [rendering]
 
