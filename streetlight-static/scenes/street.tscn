@@ -26,14 +26,17 @@ fog_density = 0.005
 fog_sky_affect = 0.025
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_k4tht"]
-size = Vector2(10, 60)
+size = Vector2(10, 200)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_k4tht"]
-size = Vector3(10, 0.2, 60)
+size = Vector3(10, 0.2, 200)
 
 [sub_resource type="BoxMesh" id="BoxMesh_nfbhi"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_k5jad"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n6dtg"]
+size = Vector3(3, 0.15, 200)
 
 [node name="street" type="Node3D" unique_id=1025097699]
 
@@ -71,3 +74,26 @@ current = true
 
 [node name="thirdPersonCamera" type="Camera3D" parent="player" unique_id=1666285241]
 transform = Transform3D(1, 0, 0, 0, 0.9396926, 0.34202012, 0, -0.34202012, 0.9396926, 0, 3, 6)
+current = true
+
+[node name="graybox" type="Node3D" parent="." unique_id=1524594638]
+
+[node name="sidewalkRight" type="CSGBox3D" parent="graybox" unique_id=908120662]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0.075, 0)
+size = Vector3(3, 0.15, 200)
+
+[node name="sidewalkLeft" type="CSGBox3D" parent="graybox" unique_id=401860108]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0.075, 0)
+use_collision = true
+size = Vector3(3, 0.15, 200)
+
+[node name="building01" type="CSGBox3D" parent="graybox" unique_id=1641551057]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 4.5, 0)
+use_collision = true
+size = Vector3(8, 9, 12)
+
+[node name="sidewalkRightCollision" type="StaticBody3D" parent="graybox" unique_id=288744101]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0.075, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="graybox/sidewalkRightCollision" unique_id=584654364]
+shape = SubResource("BoxShape3D_n6dtg")
