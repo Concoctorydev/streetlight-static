@@ -34,6 +34,11 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 		return
 
+	if Input.is_action_just_pressed("toggle_board") and is_on_floor():
+		on_board = not on_board
+		board_speed = 0
+
+
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
