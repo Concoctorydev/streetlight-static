@@ -71,10 +71,10 @@ shape = SubResource("BoxShape3D_k5jad")
 [node name="firstPersonCamera" type="Camera3D" parent="player" unique_id=509477956]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 current = true
+fov = 90.0
 
 [node name="thirdPersonCamera" type="Camera3D" parent="player" unique_id=1666285241]
 transform = Transform3D(1, 0, 0, 0, 0.9396926, 0.34202012, 0, -0.34202012, 0.9396926, 0, 3, 6)
-current = true
 
 [node name="graybox" type="Node3D" parent="." unique_id=1524594638]
 
@@ -87,13 +87,449 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0.075, 0)
 use_collision = true
 size = Vector3(3, 0.15, 200)
 
-[node name="building01" type="CSGBox3D" parent="graybox" unique_id=1641551057]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 4.5, 0)
-use_collision = true
-size = Vector3(8, 9, 12)
-
 [node name="sidewalkRightCollision" type="StaticBody3D" parent="graybox" unique_id=288744101]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0.075, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="graybox/sidewalkRightCollision" unique_id=584654364]
 shape = SubResource("BoxShape3D_n6dtg")
+
+[node name="buildingsRight" type="Node3D" parent="graybox" unique_id=2090947635]
+
+[node name="lot01" type="Node3D" parent="graybox/buildingsRight" unique_id=1901813789]
+
+[node name="house" type="CSGBox3D" parent="graybox/buildingsRight/lot01" unique_id=1641551057]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 2, 0)
+use_collision = true
+size = Vector3(15, 8, 15)
+
+[node name="driveway" type="CSGBox3D" parent="graybox/buildingsRight/lot01" unique_id=685117774]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.025, -4)
+use_collision = true
+size = Vector3(7, 0.05, 3)
+
+[node name="lot02" type="Node3D" parent="graybox/buildingsRight" unique_id=2001608578]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15)
+
+[node name="house" type="CSGBox3D" parent="graybox/buildingsRight/lot02" unique_id=1395020540]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 2, 0.74780273)
+use_collision = true
+size = Vector3(13, 4, 12.495605)
+
+[node name="shed" type="CSGBox3D" parent="graybox/buildingsRight/lot02" unique_id=887648614]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.807556, -2, -1)
+use_collision = true
+size = Vector3(4.6151123, 2.5, 3)
+
+[node name="driveway" type="CSGBox3D" parent="graybox/buildingsRight/lot02" unique_id=941239231]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, -0.025, 3)
+use_collision = true
+size = Vector3(7, 0.05, 3)
+
+[node name="lot03" type="Node3D" parent="graybox/buildingsRight" unique_id=18015764]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30)
+
+[node name="house" type="CSGBox3D" parent="graybox/buildingsRight/lot03" unique_id=625088529]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 2, 0)
+use_collision = true
+size = Vector3(13, 8, 7)
+
+[node name="shed" type="CSGBox3D" parent="graybox/buildingsRight/lot03" unique_id=294218235]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.546387, 1.25, -1)
+use_collision = true
+size = Vector3(3.0927734, 2.5, 6)
+
+[node name="driveway" type="CSGBox3D" parent="graybox/buildingsRight/lot03" unique_id=976091130]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.025, 2)
+use_collision = true
+size = Vector3(7, 0.05, 3)
+
+[node name="lot04" type="Node3D" parent="graybox/buildingsRight" unique_id=1617011940]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 45)
+
+[node name="house" type="CSGBox3D" parent="graybox/buildingsRight/lot04" unique_id=742830084]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 2, -0.670105)
+use_collision = true
+size = Vector3(10, 4, 15.092407)
+
+[node name="shed" type="CSGBox3D" parent="graybox/buildingsRight/lot04" unique_id=72535616]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.907715, 1.25, 3.4299316)
+use_collision = true
+size = Vector3(4.8154297, 2.5, 4.1401367)
+
+[node name="driveway" type="CSGBox3D" parent="graybox/buildingsRight/lot04" unique_id=2108585452]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.025, -2)
+use_collision = true
+size = Vector3(7, 0.05, 3)
+
+[node name="lot05" type="Node3D" parent="graybox/buildingsRight" unique_id=834961427]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 60)
+
+[node name="house" type="CSGBox3D" parent="graybox/buildingsRight/lot05" unique_id=2046383934]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 2, 0)
+use_collision = true
+size = Vector3(18, 4, 12)
+
+[node name="driveway" type="CSGBox3D" parent="graybox/buildingsRight/lot05" unique_id=1698383840]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.025, 3)
+use_collision = true
+size = Vector3(7, 0.05, 3)
+
+[node name="lot06" type="Node3D" parent="graybox/buildingsRight" unique_id=1170163302]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 75)
+
+[node name="house" type="CSGBox3D" parent="graybox/buildingsRight/lot06" unique_id=1735430729]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 2, 0)
+use_collision = true
+size = Vector3(10, 8, 12)
+
+[node name="shed" type="CSGBox3D" parent="graybox/buildingsRight/lot06" unique_id=997971439]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.453, 1.25, -2.5)
+use_collision = true
+size = Vector3(5.9057617, 2.5, 3.7006836)
+
+[node name="driveway" type="CSGBox3D" parent="graybox/buildingsRight/lot06" unique_id=57099547]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.025, -2)
+use_collision = true
+size = Vector3(7, 0.05, 3)
+
+[node name="lot07" type="Node3D" parent="graybox/buildingsRight" unique_id=602708799]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 90)
+
+[node name="house" type="CSGBox3D" parent="graybox/buildingsRight/lot07" unique_id=1182402495]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.424255, 2, 1.6999512)
+use_collision = true
+size = Vector3(8.848511, 4, 15.399902)
+
+[node name="shed" type="CSGBox3D" parent="graybox/buildingsRight/lot07" unique_id=1127501516]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.320557, 1.25, 4)
+use_collision = true
+size = Vector3(5.6411133, 2.5, 3)
+
+[node name="driveway" type="CSGBox3D" parent="graybox/buildingsRight/lot07" unique_id=82991126]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.025, 6)
+use_collision = true
+size = Vector3(7, 0.05, 3)
+
+[node name="lot08" type="Node3D" parent="graybox/buildingsRight" unique_id=70183308]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15)
+
+[node name="house" type="CSGBox3D" parent="graybox/buildingsRight/lot08" unique_id=1797463497]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 2, 0)
+use_collision = true
+size = Vector3(15, 4, 9.5)
+
+[node name="driveway" type="CSGBox3D" parent="graybox/buildingsRight/lot08" unique_id=2075688427]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.240473, 0.025, -2.8347168)
+use_collision = true
+size = Vector3(6.5, 0.05, 3)
+
+[node name="lot09" type="Node3D" parent="graybox/buildingsRight" unique_id=842632490]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -30)
+
+[node name="house" type="CSGBox3D" parent="graybox/buildingsRight/lot09" unique_id=1060006971]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 2, 0)
+use_collision = true
+size = Vector3(10, 4, 14)
+
+[node name="shed" type="CSGBox3D" parent="graybox/buildingsRight/lot09" unique_id=1658568644]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 1.25, 4)
+use_collision = true
+size = Vector3(2, 2.5, 4)
+
+[node name="driveway" type="CSGBox3D" parent="graybox/buildingsRight/lot09" unique_id=300299266]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.799316, 0.025, -4)
+use_collision = true
+size = Vector3(7.598633, 0.05, 3)
+
+[node name="lot10" type="Node3D" parent="graybox/buildingsRight" unique_id=1468620945]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -45)
+
+[node name="house" type="CSGBox3D" parent="graybox/buildingsRight/lot10" unique_id=1741774791]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 2, 0)
+use_collision = true
+size = Vector3(8, 8, 9)
+
+[node name="shed" type="CSGBox3D" parent="graybox/buildingsRight/lot10" unique_id=510080564]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 1.25, 3)
+use_collision = true
+size = Vector3(4, 2.5, 3)
+
+[node name="driveway" type="CSGBox3D" parent="graybox/buildingsRight/lot10" unique_id=202391918]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.025, 2)
+use_collision = true
+size = Vector3(10, 0.05, 3)
+
+[node name="lot11" type="Node3D" parent="graybox/buildingsRight" unique_id=281947193]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -60)
+
+[node name="house" type="CSGBox3D" parent="graybox/buildingsRight/lot11" unique_id=1022369297]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 2, 0)
+use_collision = true
+size = Vector3(10, 4, 12)
+
+[node name="shed" type="CSGBox3D" parent="graybox/buildingsRight/lot11" unique_id=1392059215]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 1.25, 4)
+use_collision = true
+size = Vector3(3, 2.5, 3)
+
+[node name="driveway" type="CSGBox3D" parent="graybox/buildingsRight/lot11" unique_id=479517878]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.025, -4)
+use_collision = true
+size = Vector3(7, 0.05, 3)
+
+[node name="lot12" type="Node3D" parent="graybox/buildingsRight" unique_id=744761399]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -75)
+
+[node name="house" type="CSGBox3D" parent="graybox/buildingsRight/lot12" unique_id=2125165979]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 2, 0)
+use_collision = true
+size = Vector3(7, 8, 13)
+
+[node name="shed" type="CSGBox3D" parent="graybox/buildingsRight/lot12" unique_id=208387511]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 1.25, -1.5)
+use_collision = true
+size = Vector3(5, 2.5, 3)
+
+[node name="driveway" type="CSGBox3D" parent="graybox/buildingsRight/lot12" unique_id=1317001758]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.748566, 0.025, 1)
+use_collision = true
+size = Vector3(9.497131, 0.05, 3)
+
+[node name="lot13" type="Node3D" parent="graybox/buildingsRight" unique_id=1299936825]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -90)
+
+[node name="house" type="CSGBox3D" parent="graybox/buildingsRight/lot13" unique_id=1501701888]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.86621, 2, 0.4934082)
+use_collision = true
+size = Vector3(11.732, 4, 11.013)
+
+[node name="driveway" type="CSGBox3D" parent="graybox/buildingsRight/lot13" unique_id=581077454]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.025, 2)
+use_collision = true
+size = Vector3(7, 0.05, 3)
+
+[node name="buildingsLeft" type="Node3D" parent="graybox" unique_id=621222681]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="lot01" type="Node3D" parent="graybox/buildingsLeft" unique_id=812212933]
+
+[node name="house" type="CSGBox3D" parent="graybox/buildingsLeft/lot01" unique_id=739342566]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.003174, 2, 0.59228516)
+use_collision = true
+size = Vector3(8, 4, 13)
+
+[node name="shed" type="CSGBox3D" parent="graybox/buildingsLeft/lot01" unique_id=1602202624]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 1.25, 3)
+use_collision = true
+size = Vector3(4, 2.5, 3)
+
+[node name="driveway" type="CSGBox3D" parent="graybox/buildingsLeft/lot01" unique_id=864590771]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.025, -3)
+use_collision = true
+size = Vector3(7, 0.05, 3)
+
+[node name="lot02" type="Node3D" parent="graybox/buildingsLeft" unique_id=1580576826]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15)
+
+[node name="house" type="CSGBox3D" parent="graybox/buildingsLeft/lot02" unique_id=1655819150]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.487549, 2, 0)
+use_collision = true
+size = Vector3(11, 8, 8)
+
+[node name="driveway" type="CSGBox3D" parent="graybox/buildingsLeft/lot02" unique_id=1048426445]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.025, 1.5)
+use_collision = true
+size = Vector3(7, 0.05, 3)
+
+[node name="lot03" type="Node3D" parent="graybox/buildingsLeft" unique_id=1744604310]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30)
+
+[node name="house" type="CSGBox3D" parent="graybox/buildingsLeft/lot03" unique_id=128871923]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 2, 0)
+use_collision = true
+size = Vector3(9, 8, 14)
+
+[node name="shed" type="CSGBox3D" parent="graybox/buildingsLeft/lot03" unique_id=1045415143]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 1.25, -2)
+use_collision = true
+size = Vector3(3, 2.5, 3)
+
+[node name="driveway" type="CSGBox3D" parent="graybox/buildingsLeft/lot03" unique_id=1373160261]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.742676, 0.025, -1.9999981)
+use_collision = true
+size = Vector3(7.4853516, 0.05, 3)
+
+[node name="lot04" type="Node3D" parent="graybox/buildingsLeft" unique_id=1202873306]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 45)
+
+[node name="house" type="CSGBox3D" parent="graybox/buildingsLeft/lot04" unique_id=71594629]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.99707, 2, -0.43218994)
+use_collision = true
+size = Vector3(12, 4, 11)
+
+[node name="shed" type="CSGBox3D" parent="graybox/buildingsLeft/lot04" unique_id=1122753895]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 1.25, -2.5)
+use_collision = true
+size = Vector3(3, 2.5, 4)
+
+[node name="driveway" type="CSGBox3D" parent="graybox/buildingsLeft/lot04" unique_id=1942992186]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.025, -4)
+use_collision = true
+size = Vector3(7, 0.05, 3)
+
+[node name="lot05" type="Node3D" parent="graybox/buildingsLeft" unique_id=591657002]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 60)
+
+[node name="house" type="CSGBox3D" parent="graybox/buildingsLeft/lot05" unique_id=379310401]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 2, 0)
+use_collision = true
+size = Vector3(10, 8, 12)
+
+[node name="driveway" type="CSGBox3D" parent="graybox/buildingsLeft/lot05" unique_id=1076586665]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.025, 3)
+use_collision = true
+size = Vector3(7, 0.05, 3)
+
+[node name="lot06" type="Node3D" parent="graybox/buildingsLeft" unique_id=691214487]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 75)
+
+[node name="house" type="CSGBox3D" parent="graybox/buildingsLeft/lot06" unique_id=2068234057]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.634613, 2, 0.27142334)
+use_collision = true
+size = Vector3(14.904846, 4, 10.376099)
+
+[node name="shed" type="CSGBox3D" parent="graybox/buildingsLeft/lot06" unique_id=1851517550]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.854095, 1.25, 3.2822266)
+use_collision = true
+size = Vector3(2.9897156, 2.5, 4.435547)
+
+[node name="driveway" type="CSGBox3D" parent="graybox/buildingsLeft/lot06" unique_id=1232056593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.609558, 0.025, -3.107544)
+use_collision = true
+size = Vector3(5.219, 0.05, 3)
+
+[node name="lot07" type="Node3D" parent="graybox/buildingsLeft" unique_id=605366276]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 90)
+
+[node name="house" type="CSGBox3D" parent="graybox/buildingsLeft/lot07" unique_id=561380977]
+transform = Transform3D(0.999978, 0.00039789782, -0.0066211824, -0.0004085306, 0.9999986, -0.0016033264, 0.006620535, 0.0016059981, 0.99997675, 20.643127, 1.999504, -0.029434204)
+use_collision = true
+size = Vector3(11.288208, 4, 10.497192)
+
+[node name="shed" type="CSGBox3D" parent="graybox/buildingsLeft/lot07" unique_id=871239311]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.333008, 1.25, 2.9689941)
+use_collision = true
+size = Vector3(2.3339844, 2.5, 5.0620117)
+
+[node name="driveway" type="CSGBox3D" parent="graybox/buildingsLeft/lot07" unique_id=1336320515]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.025, -3.565918)
+use_collision = true
+size = Vector3(7, 0.05, 3)
+
+[node name="lot08" type="Node3D" parent="graybox/buildingsLeft" unique_id=229858296]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15)
+
+[node name="house" type="CSGBox3D" parent="graybox/buildingsLeft/lot08" unique_id=1023991696]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 2, 0)
+use_collision = true
+size = Vector3(12.254883, 8, 12)
+
+[node name="driveway" type="CSGBox3D" parent="graybox/buildingsLeft/lot08" unique_id=1852617118]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.464, 0.025, -2)
+use_collision = true
+size = Vector3(6.9280243, 0.05, 3)
+
+[node name="lot09" type="Node3D" parent="graybox/buildingsLeft" unique_id=545584398]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -30)
+
+[node name="house" type="CSGBox3D" parent="graybox/buildingsLeft/lot09" unique_id=1407753907]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 2, 0)
+use_collision = true
+size = Vector3(9, 4, 13)
+
+[node name="shed" type="CSGBox3D" parent="graybox/buildingsLeft/lot09" unique_id=87563638]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 1.25, -3)
+use_collision = true
+size = Vector3(4, 2.5, 3)
+
+[node name="driveway" type="CSGBox3D" parent="graybox/buildingsLeft/lot09" unique_id=2108773221]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.771, 0.025, 2)
+use_collision = true
+size = Vector3(7.541687, 0.05, 3)
+
+[node name="lot10" type="Node3D" parent="graybox/buildingsLeft" unique_id=727640437]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -45)
+
+[node name="house" type="CSGBox3D" parent="graybox/buildingsLeft/lot10" unique_id=602900849]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 2, -0.187)
+use_collision = true
+size = Vector3(11.220215, 4, 10.334534)
+
+[node name="shed" type="CSGBox3D" parent="graybox/buildingsLeft/lot10" unique_id=1402950886]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 1.25, 1.5)
+use_collision = true
+size = Vector3(2, 2.5, 3)
+
+[node name="driveway" type="CSGBox3D" parent="graybox/buildingsLeft/lot10" unique_id=484890982]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.025, -3.5)
+use_collision = true
+size = Vector3(7, 0.05, 3)
+
+[node name="lot11" type="Node3D" parent="graybox/buildingsLeft" unique_id=1542747803]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -60)
+
+[node name="house" type="CSGBox3D" parent="graybox/buildingsLeft/lot11" unique_id=2138642775]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.291443, 2, -0.07269287)
+use_collision = true
+size = Vector3(8.583, 8, 15.496)
+
+[node name="shed" type="CSGBox3D" parent="graybox/buildingsLeft/lot11" unique_id=857442327]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 1.25, 2)
+use_collision = true
+size = Vector3(3, 2.5, 5)
+
+[node name="driveway" type="CSGBox3D" parent="graybox/buildingsLeft/lot11" unique_id=1940443273]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.025, -4)
+use_collision = true
+size = Vector3(7, 0.05, 3)
+
+[node name="lot12" type="Node3D" parent="graybox/buildingsLeft" unique_id=123527594]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -75)
+
+[node name="house" type="CSGBox3D" parent="graybox/buildingsLeft/lot12" unique_id=1601427633]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.762207, 2, -0.9692383)
+use_collision = true
+size = Vector3(13.524414, 4, 10)
+
+[node name="shed" type="CSGBox3D" parent="graybox/buildingsLeft/lot12" unique_id=1832833022]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 1.25, 2)
+use_collision = true
+size = Vector3(3, 2.5, 3)
+
+[node name="driveway" type="CSGBox3D" parent="graybox/buildingsLeft/lot12" unique_id=45503141]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.025, -4)
+use_collision = true
+size = Vector3(7, 0.05, 3)
+
+[node name="lot13" type="Node3D" parent="graybox/buildingsLeft" unique_id=105641361]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -90)
+
+[node name="house" type="CSGBox3D" parent="graybox/buildingsLeft/lot13" unique_id=171148781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.845276, 2, 0)
+use_collision = true
+size = Vector3(13, 4, 12)
+
+[node name="shed" type="CSGBox3D" parent="graybox/buildingsLeft/lot13" unique_id=2076343879]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.212158, 1.25, 2.4047852)
+use_collision = true
+size = Vector3(2.5, 2.5, 6)
+
+[node name="driveway" type="CSGBox3D" parent="graybox/buildingsLeft/lot13" unique_id=420944094]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.025, -4)
+use_collision = true
+size = Vector3(7, 0.05, 3)
+
+[node name="yards" type="CSGBox3D" parent="graybox" unique_id=1377940710]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.06, 0)
+use_collision = true
+size = Vector3(100, 0.1, 200)

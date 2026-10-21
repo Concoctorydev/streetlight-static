@@ -3,8 +3,8 @@ extends CharacterBody3D
 const TURN_SPEED = 2.0
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
-const BOARD_MAX_SPEED = 10.0
-const PUSH_STRENGTH = 1.5
+const BOARD_MAX_SPEED = 13.0
+const PUSH_STRENGTH = 2
 const BOARD_FRICTION = 0.5
 const BRAKE_STRENGTH = 3.5
 var on_board := true
