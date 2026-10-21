@@ -4,11 +4,13 @@ const TURN_SPEED = 2.0
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 const BOARD_MAX_SPEED = 13.0
-const PUSH_STRENGTH = 2
+const PUSH_STRENGTH = 2.0
 const BOARD_FRICTION = 0.5
 const BRAKE_STRENGTH = 3.5
+const GRASS_FRICTION = 13.0
 var on_board := true
 var board_speed := 0.0
+var on_grass := false
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -25,6 +27,8 @@ func _physics_process(delta: float) -> void:
 		board_speed = move_toward(board_speed, 0, BOARD_FRICTION * delta)
 		if Input.is_action_pressed("ui_down") and is_on_floor():
 			board_speed = move_toward(board_speed, 0, BRAKE_STRENGTH * delta)
+		if on_grass and is_on_floor():
+			board_speed = move_toward(board_speed, 0, GRASS_FRICTION * delta)
 		board_speed = clamp(board_speed, 0, BOARD_MAX_SPEED)
 		var turn := Input.get_axis("ui_right", "ui_left")
 		rotate_y(turn * TURN_SPEED * delta)
@@ -45,3 +49,6 @@ func _physics_process(delta: float) -> void:
 			velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+	on_grass = $groundRay.is_colliding() and $groundRay.get_collider().is_in_group("grass")
+	print(on_grass, " ", is_on_floor(), " ", board_speed)
