@@ -3,6 +3,7 @@
 [ext_resource type="Material" uid="uid://cryab0iwwu10h" path="res://assets/materials/asphalt.tres" id="1_3ffmx"]
 [ext_resource type="Script" uid="uid://c466re6d6jo46" path="res://scripts/player.gd" id="1_tr5t1"]
 [ext_resource type="Material" uid="uid://djrk66jlgnod7" path="res://assets/materials/grass.tres" id="2_l8dq3"]
+[ext_resource type="Material" uid="uid://d2pk4wcwe8ceu" path="res://assets/materials/concrete.tres" id="3_t23v0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nfbhi"]
 sky_top_color = Color(0.3372549, 0.38431373, 0.56078434, 1)
@@ -87,11 +88,13 @@ target_position = Vector3(0, -0.6, 0)
 [node name="sidewalkRight" type="CSGBox3D" parent="graybox" unique_id=908120662]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0.075, 0)
 size = Vector3(3, 0.15, 200)
+material = ExtResource("3_t23v0")
 
 [node name="sidewalkLeft" type="CSGBox3D" parent="graybox" unique_id=401860108]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0.075, 0)
 use_collision = true
 size = Vector3(3, 0.15, 200)
+material = ExtResource("3_t23v0")
 
 [node name="sidewalkRightCollision" type="StaticBody3D" parent="graybox" unique_id=288744101]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0.075, 0)
@@ -112,6 +115,7 @@ size = Vector3(15, 8, 15)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.075, -4)
 use_collision = true
 size = Vector3(7, 0.15, 3)
+material = ExtResource("3_t23v0")
 
 [node name="lot02" type="Node3D" parent="graybox/buildingsRight" unique_id=2001608578]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15)
@@ -130,6 +134,7 @@ size = Vector3(4.6151123, 2.5, 3)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.075, 3)
 use_collision = true
 size = Vector3(7, 0.15, 3)
+material = ExtResource("3_t23v0")
 
 [node name="lot03" type="Node3D" parent="graybox/buildingsRight" unique_id=18015764]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30)
@@ -148,6 +153,7 @@ size = Vector3(3.0927734, 2.5, 6)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.075, 2)
 use_collision = true
 size = Vector3(7, 0.15, 3)
+material = ExtResource("3_t23v0")
 
 [node name="lot04" type="Node3D" parent="graybox/buildingsRight" unique_id=1617011940]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 45)
@@ -166,6 +172,7 @@ size = Vector3(4.8154297, 2.5, 4.1401367)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.075, -2)
 use_collision = true
 size = Vector3(7, 0.15, 3)
+material = ExtResource("3_t23v0")
 
 [node name="lot05" type="Node3D" parent="graybox/buildingsRight" unique_id=834961427]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 60)
@@ -179,6 +186,7 @@ size = Vector3(18, 4, 12)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.075, 3)
 use_collision = true
 size = Vector3(7, 0.15, 3)
+material = ExtResource("3_t23v0")
 
 [node name="lot06" type="Node3D" parent="graybox/buildingsRight" unique_id=1170163302]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 75)
@@ -197,6 +205,7 @@ size = Vector3(5.9057617, 2.5, 3.7006836)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.075, -2)
 use_collision = true
 size = Vector3(7, 0.15, 3)
+material = ExtResource("3_t23v0")
 
 [node name="lot07" type="Node3D" parent="graybox/buildingsRight" unique_id=602708799]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 90)
@@ -215,6 +224,7 @@ size = Vector3(5.6411133, 2.5, 3)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.075, 6)
 use_collision = true
 size = Vector3(7, 0.15, 3)
+material = ExtResource("3_t23v0")
 
 [node name="lot08" type="Node3D" parent="graybox/buildingsRight" unique_id=70183308]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15)
@@ -228,6 +238,7 @@ size = Vector3(15, 4, 9.5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.24, 0.075, -2.835)
 use_collision = true
 size = Vector3(6.5, 0.15, 3)
+material = ExtResource("3_t23v0")
 
 [node name="lot09" type="Node3D" parent="graybox/buildingsRight" unique_id=842632490]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -30)
@@ -246,6 +257,7 @@ size = Vector3(2, 2.5, 4)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.799, 0.075, -4)
 use_collision = true
 size = Vector3(7.599, 0.15, 3)
+material = ExtResource("3_t23v0")
 
 [node name="lot10" type="Node3D" parent="graybox/buildingsRight" unique_id=1468620945]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -45)
@@ -264,6 +276,7 @@ size = Vector3(4, 2.5, 3)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.075, 2)
 use_collision = true
 size = Vector3(10, 0.15, 3)
+material = ExtResource("3_t23v0")
 
 [node name="lot11" type="Node3D" parent="graybox/buildingsRight" unique_id=281947193]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -60)
@@ -282,6 +295,7 @@ size = Vector3(3, 2.5, 3)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.075, -4)
 use_collision = true
 size = Vector3(7, 0.15, 3)
+material = ExtResource("3_t23v0")
 
 [node name="lot12" type="Node3D" parent="graybox/buildingsRight" unique_id=744761399]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -75)
@@ -300,6 +314,7 @@ size = Vector3(5, 2.5, 3)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.749, 0.075, 1)
 use_collision = true
 size = Vector3(9.497, 0.15, 3)
+material = ExtResource("3_t23v0")
 
 [node name="lot13" type="Node3D" parent="graybox/buildingsRight" unique_id=1299936825]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -90)
@@ -313,6 +328,7 @@ size = Vector3(11.732, 4, 11.013)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.075, 2)
 use_collision = true
 size = Vector3(7, 0.15, 3)
+material = ExtResource("3_t23v0")
 
 [node name="buildingsLeft" type="Node3D" parent="graybox" unique_id=621222681]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
@@ -333,6 +349,7 @@ size = Vector3(4, 2.5, 3)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.075, -3)
 use_collision = true
 size = Vector3(7, 0.15, 3)
+material = ExtResource("3_t23v0")
 
 [node name="lot02" type="Node3D" parent="graybox/buildingsLeft" unique_id=1580576826]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15)
@@ -346,6 +363,7 @@ size = Vector3(11, 8, 8)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.075, 1.5)
 use_collision = true
 size = Vector3(7, 0.15, 3)
+material = ExtResource("3_t23v0")
 
 [node name="lot03" type="Node3D" parent="graybox/buildingsLeft" unique_id=1744604310]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30)
@@ -364,6 +382,7 @@ size = Vector3(3, 2.5, 3)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.743, 0.075, -2)
 use_collision = true
 size = Vector3(7.485, 0.15, 3)
+material = ExtResource("3_t23v0")
 
 [node name="lot04" type="Node3D" parent="graybox/buildingsLeft" unique_id=1202873306]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 45)
@@ -382,6 +401,7 @@ size = Vector3(3, 2.5, 4)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.075, -4)
 use_collision = true
 size = Vector3(7, 0.15, 3)
+material = ExtResource("3_t23v0")
 
 [node name="lot05" type="Node3D" parent="graybox/buildingsLeft" unique_id=591657002]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 60)
@@ -395,6 +415,7 @@ size = Vector3(10, 8, 12)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.075, 3)
 use_collision = true
 size = Vector3(7, 0.15, 3)
+material = ExtResource("3_t23v0")
 
 [node name="lot06" type="Node3D" parent="graybox/buildingsLeft" unique_id=691214487]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 75)
@@ -413,6 +434,7 @@ size = Vector3(2.9897156, 2.5, 4.435547)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.61, 0.075, -3)
 use_collision = true
 size = Vector3(5.219, 0.15, 3)
+material = ExtResource("3_t23v0")
 
 [node name="lot07" type="Node3D" parent="graybox/buildingsLeft" unique_id=605366276]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 90)
@@ -431,6 +453,7 @@ size = Vector3(2.3339844, 2.5, 5.0620117)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.075, -3.566)
 use_collision = true
 size = Vector3(7, 0.15, 3)
+material = ExtResource("3_t23v0")
 
 [node name="lot08" type="Node3D" parent="graybox/buildingsLeft" unique_id=229858296]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15)
@@ -444,6 +467,7 @@ size = Vector3(12.254883, 8, 12)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.464, 0.075, -2)
 use_collision = true
 size = Vector3(6.928, 0.15, 3)
+material = ExtResource("3_t23v0")
 
 [node name="lot09" type="Node3D" parent="graybox/buildingsLeft" unique_id=545584398]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -30)
@@ -462,6 +486,7 @@ size = Vector3(4, 2.5, 3)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.771, 0.075, 2)
 use_collision = true
 size = Vector3(7.542, 0.15, 3)
+material = ExtResource("3_t23v0")
 
 [node name="lot10" type="Node3D" parent="graybox/buildingsLeft" unique_id=727640437]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -45)
@@ -480,6 +505,7 @@ size = Vector3(2, 2.5, 3)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.075, -3.5)
 use_collision = true
 size = Vector3(7, 0.15, 3)
+material = ExtResource("3_t23v0")
 
 [node name="lot11" type="Node3D" parent="graybox/buildingsLeft" unique_id=1542747803]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -60)
@@ -498,6 +524,7 @@ size = Vector3(3, 2.5, 5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.075, -4)
 use_collision = true
 size = Vector3(7, 0.15, 3)
+material = ExtResource("3_t23v0")
 
 [node name="lot12" type="Node3D" parent="graybox/buildingsLeft" unique_id=123527594]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -75)
@@ -516,6 +543,7 @@ size = Vector3(3, 2.5, 3)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.075, -4)
 use_collision = true
 size = Vector3(7, 0.15, 3)
+material = ExtResource("3_t23v0")
 
 [node name="lot13" type="Node3D" parent="graybox/buildingsLeft" unique_id=105641361]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -90)
@@ -534,6 +562,7 @@ size = Vector3(2.5, 2.5, 6)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.075, -4)
 use_collision = true
 size = Vector3(7, 0.15, 3)
+material = ExtResource("3_t23v0")
 
 [node name="yardsRight" type="CSGBox3D" parent="graybox" unique_id=1377940710 groups=["grass"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 0.04, 0)

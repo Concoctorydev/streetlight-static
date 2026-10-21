@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d2pk4wcwe8ceu"]
+
+[sub_resource type="Gradient" id="Gradient_7vr8w"]
+colors = PackedColorArray(0.6100425, 0.59389114, 0.5615911, 1, 0.7426874, 0.7276857, 0.69767904, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_wjoh7"]
+frequency = 0.2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_yrasx"]
+noise = SubResource("FastNoiseLite_wjoh7")
+color_ramp = SubResource("Gradient_7vr8w")
+seamless = true
+
+[resource]
+albedo_texture = SubResource("NoiseTexture2D_yrasx")
+uv1_triplanar = true
