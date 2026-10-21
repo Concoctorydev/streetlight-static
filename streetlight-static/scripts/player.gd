@@ -81,8 +81,14 @@ func _physics_process(delta: float) -> void:
 
 	on_grass = $groundRay.is_colliding() and $groundRay.get_collider().is_in_group("grass")
 
-	if is_on_floor() and on_board and on_grass and board_speed > GRASS_BAIL_SPEED:
+	if on_board and on_grass and board_speed > GRASS_BAIL_SPEED:
 		bail()
+
+	for i in range(get_slide_collision_count()):
+		var col := get_slide_collision(i)
+		var normal := col.get_normal()
+		if is_on_floor() and on_board and abs(normal.y) < 0.3 and -transform.basis.z.dot(normal) < -0.7 and board_speed > BAIL_SPEED:
+			bail()
 
 func bail() -> void:
 	on_board = false
