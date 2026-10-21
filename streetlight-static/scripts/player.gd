@@ -8,9 +8,11 @@ const PUSH_STRENGTH = 2.0
 const BOARD_FRICTION = 0.5
 const BRAKE_STRENGTH = 3.5
 const GRASS_FRICTION = 13.0
+const PUSH_INTERVAL = 0.7
 var on_board := true
 var board_speed := 0.0
 var on_grass := false
+var push_timer := 0.0
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -22,8 +24,13 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 
 	if on_board:
-		if Input.is_action_just_pressed("push") and is_on_floor():
-			board_speed += PUSH_STRENGTH
+		if Input.is_action_pressed("push") and is_on_floor():
+			push_timer -= delta
+			if push_timer <= 0:
+				board_speed += PUSH_STRENGTH
+				push_timer = PUSH_INTERVAL
+		else:
+			push_timer = 0
 		board_speed = move_toward(board_speed, 0, BOARD_FRICTION * delta)
 		if Input.is_action_pressed("brake") and is_on_floor():
 			board_speed = move_toward(board_speed, 0, BRAKE_STRENGTH * delta)
@@ -49,4 +56,3 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 	on_grass = $groundRay.is_colliding() and $groundRay.get_collider().is_in_group("grass")
-	print(on_grass, " ", is_on_floor(), " ", board_speed)
