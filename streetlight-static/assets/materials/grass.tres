@@ -1,8 +1,17 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://djrk66jlgnod7"]
 
-[ext_resource type="Texture2D" uid="uid://ddprscrpsofah" path="res://assets/materials/demo/assets/textures/ground037_alb_ht.png" id="1_prref"]
+[sub_resource type="Gradient" id="Gradient_c82c8"]
+colors = PackedColorArray(0.19987524, 0.30076802, 0.12580678, 1, 0.5055702, 0.70585984, 0.33525455, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_prref"]
+frequency = 0.07
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_3jguq"]
+noise = SubResource("FastNoiseLite_prref")
+color_ramp = SubResource("Gradient_c82c8")
+seamless = true
 
 [resource]
-albedo_texture = ExtResource("1_prref")
+albedo_texture = SubResource("NoiseTexture2D_3jguq")
 uv1_triplanar = true
 uv1_triplanar_sharpness = 0.2
