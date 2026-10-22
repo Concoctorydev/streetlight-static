@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://db2pksfqvhmvk"]
+
+[ext_resource type="Texture2D" uid="uid://f74and1lq7p5" path="res://assets/models/kenney_suburban/Textures/colormap_brown_blue.png" id="1_t7hjs"]
+
+[resource]
+albedo_texture = ExtResource("1_t7hjs")
