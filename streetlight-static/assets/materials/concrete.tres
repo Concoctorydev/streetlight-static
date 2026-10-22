@@ -1,7 +1,7 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://d2pk4wcwe8ceu"]
 
 [sub_resource type="Gradient" id="Gradient_7vr8w"]
-colors = PackedColorArray(0.6100425, 0.59389114, 0.5615911, 1, 0.7426874, 0.7276857, 0.69767904, 1)
+colors = PackedColorArray(0.4098755, 0.39574498, 0.3674917, 1, 0.8035143, 0.7910819, 0.7662063, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_wjoh7"]
 frequency = 0.2
